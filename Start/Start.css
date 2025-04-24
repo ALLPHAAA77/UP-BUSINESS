@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+/* 
+    font-family: "Ubuntu Condensed", sans-serif;
+*/
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --violet: #7C76BB;
+    --pink:#FF87B0;
+    --gray: #848482;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: "Ubuntu Condensed", sans-serif;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5vh 3vh 0vh 3vh;
+    -webkit-animation: slide-in-blurred-top 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+nav div ion-icon {
+    font-size: 30px;
+    color: var(--pink);
+}
+nav div h1 {
+    font-size: 30px;
+    color: var(--violet);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--violet);
+    cursor: pointer;
+}
+nav ul li:last-child a{
+    border: none;
+    outline: none;
+    background-color: var(--violet);
+    color: var(--white);
+    padding: 1vh 4vh;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+nav ul li:last-child a:hover {
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.3);
+}
+#pink {
+    background-color: var(--pink);
+}
+section {
+    text-align: center;
+    margin-top: 5vh;
+    -webkit-animation: slide-in-blurred-top 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+section h1 {
+    font-size: 44px;
+    color: var(--violet);
+}
+section img {
+    width: 512px;
+}
+section button {
+    padding: 1.5vh;
+    width: 15%;
+    border: 3px solid var(--violet);
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    font-size: 20px;
+    color: var(--violet);
+    display: flex;
+    gap: 5px;    
+    margin: auto;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+section button:hover {
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.2);
+}
+section button ion-icon {
+    font-size: 24px;
+}
+footer {
+    background-color: #F6FBFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 13vh;
+    -webkit-animation: slide-in-blurred-bottom 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.first, .sec, .third, .fourth{
+    padding: 2vh;
+}
+.first div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.first div:nth-child(1) h1 {
+    font-size: 28px;
+    color: var(--violet);
+}
+.first div:nth-child(1) ion-icon {
+    font-size: 28px;
+    color: var(--pink);
+}
+.first p {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 18px;
+}
+#icon {
+    display: flex;
+    gap: 30px;
+}
+#icon ion-icon {
+    font-size: 30px;
+    color: var(--pink);
+}
+.sec h1{
+    font-size: 28px;
+    color: var(--violet);
+}
+.sec h3 {
+    font-size: 18px;
+    margin-top: 1vh;
+    color: var(--violet);
+    font-weight: 300;
+}
+.third h1 {
+    font-size: 28px;
+    color: var(--violet);
+}
+.third p {
+    margin-top: 1.5vh;
+    font-size: 18px;
+    color: var(--violet);
+}
+
+.fourth h1 {
+    font-size: 28px;
+    color: var(--violet);
+}
+.fourth p {
+    margin-top: 1.5vh;
+    font-size: 18px;
+    color: var(--violet);
+}
+@keyframes slide-in-blurred-top {
+    0% {
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-blurred-bottom {
+    0% {
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
